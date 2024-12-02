@@ -18,15 +18,25 @@ string NBR[] = {"zero", "un", "deux", "trois", "quatre", "cinq", "six", "sept", 
 // fonction principale
 int main()
 {
-	int j,flag;
+	int j, flag;
 	string* Entree;
 	
 	system("color F0");
 	Entree = input(&flag);
 	
-	string Pentiere[4] = {divide(Entree[0]), divide(Entree[0]), divide(Entree[0]), divide(Entree[0])};
+	string Pentiere[4] = {
+		divide(Entree[0]), 
+		divide(Entree[0]), 
+		divide(Entree[0]), 
+		divide(Entree[0])
+	};
 	string Preelle[4];
-	string Ordre[4] = {"Milliards", "Millions", "Mille", ""};
+	string Ordre[4] = {
+		"Milliards", 
+		"Millions", 
+		"Mille", 
+		""
+	};
 	
 	printf("\a");
 	bool isZ = false;
@@ -236,8 +246,10 @@ int Exists(char c , string str , int i)
 	while(str[j] != '\0' && j < i)
 	{
 		if(str[j] == c)
+		{
 			return j;
-			j++;
+		}
+		j++;
 	}
 	return 0;
 }
