@@ -4,7 +4,6 @@
 #include <string.h>
 #include "nombres.h"
 
-typedef char* string;
 
 string *input(int*);
 string divide(string);
@@ -112,7 +111,7 @@ int IsFloat(string str)
 // pour initialiser une chaine de caracteres formee de zeros
 string str_init(int size)
 {
-	string str = malloc(size * sizeof(char));
+	string str = (string)malloc(size * sizeof(char));
 	int i;
 	for (i = 0; i < size - 1; i++)
 	{
