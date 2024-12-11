@@ -323,6 +323,8 @@ bool isZero(string str)
 	}
 	return true;
 }
+
+//pour charger le tableau des nombres a partir du fichier NBRS.txt
 string Load(int i)
 {
 	FILE* fp = fopen("NBRS.txt","r+");
